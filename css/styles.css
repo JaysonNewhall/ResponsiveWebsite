@@ -1,0 +1,325 @@
+html, body {
+  width: 100%;
+}
+body {
+  font-family: "Genos", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0;
+}
+.container {
+  display: grid;
+}
+.header {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+.menu {
+  display: flex;
+  justify-self: right;
+  align-self: center;
+}
+.menu button {
+  display: none;
+}
+.company {
+  display: flex;
+  gap: 5px;
+  font-size: x-large;
+}
+.company i {
+  align-self: center;
+  padding: 0px 8px 0px 25px;
+}
+.company h3 {
+  color: #6b6b6b;
+}
+.nav {
+  display: flex;
+  gap: 29px;
+  align-self: center;
+  padding-right: 25px;
+  font-size: larger;
+}
+.nav a:hover {
+  text-decoration: none;
+}
+.menu a:hover {
+  color: #333;
+}
+.home, .contact, .about {
+  color: #6b6b6b;
+}
+.about-us1 { grid-area: about-us1;}
+.paragraph { grid-area: paragraph;}
+.about-us {
+  display: grid;
+  grid-template-areas: 
+  "about-us1"
+  "paragraph";
+  justify-items: center;
+}
+.about-us1, .our-team h2 {
+  font-size: 60px;
+  font-weight: 350;
+  margin-bottom: 0;
+  color: #6b6b6b;
+}
+.paragraph, .our-team p {
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 15px;
+  color: #6b6b6b;
+}
+.featured {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px
+}
+.portfolio-item { 
+  width: 100%; 
+}
+.portfolio-item p { font-weight: 500; }
+.portfolio-item img { max-width: 100%; }
+.our-team {
+  justify-self: center;
+  padding-bottom: 15px;
+}
+.portfolio-1p { grid-area: portfolio-1p; }
+.portfolio-2p { grid-area: portfolio-2p; }
+.portfolio-3p { grid-area: portfolio-3p;}
+.portfolio-1p p, .portfolio-2p p, .portfolio-3p p { color: grey; }
+.portfolio-img1 { grid-area: portfolio-img1;}
+.portfolio-img2 { grid-area: portfolio-img2;}
+.portfolio-img3 { grid-area: portfolio-img3;}
+.our-team h2 {
+  text-align: center;
+}
+.team-section {
+  display: flex;
+  text-align: left;
+  justify-content: space-evenly;
+  padding: 0px 25px 35px 25px;
+}
+.team-section a:hover {
+  color: #999;
+}
+.chevron-right, .chevron-left {
+  align-content: center;
+  color: #999;
+}
+.chevron-left { grid-area: chevron-left; }
+.chevron-right { grid-area: chevron-right; }
+.melissa { 
+  grid-area: melissa;
+  max-width: 200px; 
+}
+.melissa img { max-width: 175px; }
+.frank { 
+  grid-area: frank;
+  max-width: 200px; 
+}
+.frank img { max-width: 175px; }
+.jane { 
+  grid-area: jane;
+  max-width: 200px; 
+}
+.jane img { max-width: 175px; }
+.mark { 
+  grid-area: mark;
+  max-width: 200px; 
+}
+.mark img { max-width: 175px; }
+#style-one, #star-one, #naismith-one, #stoner-one {
+  margin-top: 1px;
+}
+#melissa, #frank, #jane, #mark {
+  margin-bottom: 3px;
+}
+.mark a, .jane a, .frank a, .melissa a {
+  padding: 0px 8px 0px 0px;
+  color: lightgray;
+  justify-content: center;
+}
+.footer {
+  display: grid;
+  margin-top: 75px;
+  background-color: #282828;
+}
+.footer a {
+  text-decoration: none;
+  color: #999;
+}
+.trademark {
+  text-align: center;
+  color: #999;
+}
+.copyright {
+  margin-bottom: 1px;
+}
+hr {
+  border-color: #333;
+  width: 90%;
+}
+.jayy-codes {
+  margin-top: 1px;
+}
+.socials {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.socials a:hover {
+  color: white;
+}
+.socials i {
+  padding-right: 10px;
+}
+.information {
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5px;
+  margin: 30px 0px 60px 0px;
+}
+.information h4 {
+  color: white;
+}
+.address, .email, .phone {
+  color: grey;
+}
+.email a {
+  color: white;
+  text-decoration: underline;
+}
+.email a:hover {
+  color: grey;
+}
+.phone p, .email p, .address p {
+  margin: 0;
+}
+.phone h4, .email h4, .address h4 {
+  margin-bottom: 10px;
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+}
+.menu-list a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+@media (max-width: 1023px) {
+  .menu ul {
+    display: none;
+	}
+  button {
+    border: none;
+    background-color: white;
+    color: #999;
+  }
+  .menu button {
+    display: block;
+  }
+  .about-us, .our-team {
+    justify-self: center;
+  }
+  .featured {
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: reapet(3,1fr);
+  }
+  .portfolio-item {
+    display: flex;
+    width: 100%;
+  }
+  .portfolio-item img {
+    width: 400px;
+  }
+  .portfolio-1p, .portfolio-2p, .portfolio-3p{
+    margin: 0px 20px 0px 30px;
+  }
+  .portfolio-1p h3, .portfolio-2p h3, .portfolio-3p h3 {
+    margin-top: 5px;
+    font-size: x-large;
+  }
+  .portfolio-1p p, .portfolio-2p p, .portfolio-3p p {
+    margin-top: 25px;
+  }
+  .team-section {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "chevron-left melissa frank chevron-right"
+    "chevron-left jane mark chevron-right";
+  }
+  .information {
+    justify-self: center;
+    width: 100%;
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .company h3 {
+    display: grid;
+  }
+  .featured {
+    display: grid;
+    gap: 30px;
+    text-align: center;
+  }
+  .portfolio-img {
+    justify-self: center;
+  }
+  .portfolio-item {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "."
+    "portfolio-1p"
+    "."
+    "portfolio-2p"
+    "."
+    "portfolio-3p";
+  }
+  .team-section {
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    display: grid;
+    gap: 30px;
+    grid-template-areas: 
+    "melissa"
+    "frank"
+    "mark"
+    "jane";
+  }
+  .chevron-left, .chevron-right {
+    display: none;
+  }
+  .footer {
+    justify-items: center;
+  }
+  .socials {
+    display: grid;
+    justify-self: center;
+  }
+  .address { grid-area: address;}
+  .email { grid-area: email;}
+  .phone { grid-area: phone;}
+  .information {
+    display: grid;
+    grid-template-areas:
+    ". address"
+    ". email"
+    ". phone";
+  }
+}
